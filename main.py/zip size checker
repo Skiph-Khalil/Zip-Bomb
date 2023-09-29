@@ -1,1 +1,5 @@
-
+import zipfile
+def get_extracted_size(filepath: str) -> int:
+    """Get the extracted size in bytes."""
+    zp = zipfile.ZipFile(filepath)
+    return sum([zinfo.file_size for zinfo in zp.filelist])
