@@ -1,0 +1,3 @@
+import clamd
+cd = clamd.ClamdUnixSocket()
+cd.scan('/home/moose/bomb.zip')
